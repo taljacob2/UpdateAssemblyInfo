@@ -421,7 +421,7 @@ function Get-BuildNumberRevision {
 }
 
 try {
-    $assemblyInfoFiles = Get-VstsInput -Name assemblyInfoFiles -Require
+    $assemblyInfoFiles = '**\*AssemblyInfo.*'
     $script:description = Get-VstsInput -Name description
     # $script:configuration = Get-VstsInput -Name configuration
     $script:company = Get-VstsInput -Name company
