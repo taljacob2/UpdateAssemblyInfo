@@ -7,9 +7,9 @@
   "category": "Utility",
   "author": "Bool (by Sigma) / Patched by Tal Jacob",
   "version": {
-    "Major": 0,
+    "Major": 1,
     "Minor": 0,
-    "Patch": 1
+    "Patch": 0
   },
   "instanceNameFormat": "Update Assembly: **\\*AssemblyInfo.*",
   "groups": [
