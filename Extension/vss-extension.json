@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "update-assembly-info",
     "name": "Update Assembly Info",
-    "version": "0.0.2",
+    "version": "0.0.9",
     "publisher": "bool",
     "targets": [
         {

@@ -9,9 +9,9 @@
   "version": {
     "Major": 0,
     "Minor": 0,
-    "Patch": 2
+    "Patch": 9
   },
-  "instanceNameFormat": "Update Assembly: $(assemblyInfoFiles)",
+  "instanceNameFormat": "Update Assembly: **\\*AssemblyInfo.*",
   "groups": [
     {
       "name": "fileVersion",
@@ -30,14 +30,6 @@
     }
   ],
   "inputs": [
-    {
-      "name": "assemblyInfoFiles",
-      "type": "filePath",
-      "label": "Assembly Info",
-      "defaultValue": "**\\*AssemblyInfo.*",
-      "required": true,
-      "helpMarkDown": "Relative path from repo root of the assembly info file(s). Variables can be used, eg. `$(Build.SourcesDirectory)`. You can also use wildcards, eg. `\\*\\*\\AssemblyInfo.\\*` for all AssemblyInfo.* files in all sub folders."
-    },
     {
       "name": "description",
       "type": "string",
