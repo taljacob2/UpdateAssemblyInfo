@@ -362,8 +362,6 @@
 
             var updateResults = new List<UpdateResult>();
 
-            Files = Files.Where(path => !path.Contains("Bool.PowerShell.UpdateAssemblyInfo.dll")).ToList();
-
             if (Files == null || !Files.Any())
             {
                 Cmdlet.WriteDebug("no files");

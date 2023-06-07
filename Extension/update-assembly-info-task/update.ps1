@@ -538,6 +538,9 @@ try {
         $files = Get-ChildItem $assemblyInfoFiles -Recurse | ForEach-Object {$_.FullName}
     }
 
+    $files = $files | Where-Object { !$_.Contains("Bool.PowerShell.UpdateAssemblyInfo.dll") }
+    # $files = $files.Where(path => !path.Contains("Bool.PowerShell.UpdateAssemblyInfo.dll")).ToList();
+
     if ($files) {
         Write-VstsTaskDebug -Message "files:"
         Write-VstsTaskDebug -Message "$files"
