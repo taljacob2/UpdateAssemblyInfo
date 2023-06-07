@@ -1,11 +1,11 @@
 {
   "id": "952c2f8c-fd34-4eb2-871a-8a6a7954859a",
-  "name": "update-assembly-info",
-  "friendlyName": "Update Assembly Info",
+  "name": "update-assembly-info-slim",
+  "friendlyName": "Update Assembly Info Slim",
   "description": "Update assembly info of one or multiple projects",
   "helpMarkDown": "Having Problems? Please [create an issue on our Github](https://github.com/BoolBySigma/UpdateAssemblyInfo/issues) and we will try to help you.",
   "category": "Utility",
-  "author": "Bool (by Sigma)",
+  "author": "Bool (by Sigma) / Patched by Tal Jacob",
   "version": {
     "Major": 0,
     "Minor": 0,
