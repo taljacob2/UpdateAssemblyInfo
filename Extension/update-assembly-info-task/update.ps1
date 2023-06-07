@@ -432,11 +432,11 @@ try {
     $script:fileVersionMajor = 1
     $script:fileVersionMinor = 0
     $script:fileVersionBuild = 0
-    $script:fileVersionRevision = Get-VstsInput $(Build.BuildId)
+    $script:fileVersionRevision = $env:BUILD_BUILDNUMBER
     $script:assemblyVersionMajor = 1
     $script:assemblyVersionMinor = 0
     $script:assemblyVersionBuild = 0
-    $script:assemblyVersionRevision = Get-VstsInput $(Build.BuildId)
+    $script:assemblyVersionRevision = $env:BUILD_BUILDNUMBER
     # $script:informationalVersion = Get-VstsInput -Name informationalVersion
     # $comVisible = Get-VstsInput -Name comVisible
     # $clsCompliant = Get-VstsInput -Name clsCompliant
