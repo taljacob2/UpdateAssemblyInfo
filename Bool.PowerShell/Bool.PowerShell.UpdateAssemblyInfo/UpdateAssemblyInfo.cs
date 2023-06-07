@@ -19,7 +19,6 @@
         {
             WriteDebug("ProcessRecord");
             _updater.Cmdlet = this;
-            // Files = Files.Where(path => !path.Contains("Bool.PowerShell.UpdateAssemblyInfo.dll")).ToList();
             _updater.Files = Files;
             _updater.AssemblyVersion = AssemblyVersion;
             _updater.AssemblyFileVersion = AssemblyFileVersion;
