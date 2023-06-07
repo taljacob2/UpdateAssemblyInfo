@@ -11,6 +11,7 @@
     "Minor": 0,
     "Patch": 17
   },
+  "instanceNameFormat": "Update Assembly: $(assemblyInfoFiles)",
   "groups": [
     {
       "name": "fileVersion",
