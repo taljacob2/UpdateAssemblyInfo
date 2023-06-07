@@ -423,12 +423,12 @@ function Get-BuildNumberRevision {
 try {
     $assemblyInfoFiles = Get-VstsInput -Name assemblyInfoFiles -Require
     $script:description = Get-VstsInput -Name description
-    $script:configuration = Get-VstsInput -Name configuration
+    # $script:configuration = Get-VstsInput -Name configuration
     $script:company = Get-VstsInput -Name company
     $script:product = Get-VstsInput -Name product
-    $script:copyright = Get-VstsInput -Name copyright
-    $script:culture = Get-VstsInput -Name culture
-    $script:trademark = Get-VstsInput -Name trademark
+    # $script:copyright = Get-VstsInput -Name copyright
+    # $script:culture = Get-VstsInput -Name culture
+    # $script:trademark = Get-VstsInput -Name trademark
     $script:fileVersionMajor = '1'
     $script:fileVersionMinor = '0'
     $script:fileVersionBuild = '0'
@@ -437,11 +437,11 @@ try {
     $script:assemblyVersionMinor = '0'
     $script:assemblyVersionBuild = '0'
     $script:assemblyVersionRevision = '$(Build.BuildId)'
-    $script:informationalVersion = Get-VstsInput -Name informationalVersion
-    $comVisible = Get-VstsInput -Name comVisible
-    $clsCompliant = Get-VstsInput -Name clsCompliant
-    $ensureAttribute = Get-VstsInput -Name ensureAttribute -AsBool
-    $script:customAttributes = Get-VstsInput -Name customAttributes
+    # $script:informationalVersion = Get-VstsInput -Name informationalVersion
+    # $comVisible = Get-VstsInput -Name comVisible
+    # $clsCompliant = Get-VstsInput -Name clsCompliant
+    # $ensureAttribute = Get-VstsInput -Name ensureAttribute -AsBool
+    # $script:customAttributes = Get-VstsInput -Name customAttributes
 
     if (Test-BuildNumberRevisionVariableUsed) {
         if (!(Get-VstsTaskVariable -Name "System.EnableAccessToken" -AsBool)) {
