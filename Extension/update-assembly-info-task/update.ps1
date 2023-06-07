@@ -438,8 +438,8 @@ try {
     $script:assemblyVersionBuild = 0
     $script:assemblyVersionRevision = $env:BUILD_BUILDNUMBER
     # $script:informationalVersion = Get-VstsInput -Name informationalVersion
-    # $comVisible = Get-VstsInput -Name comVisible
-    # $clsCompliant = Get-VstsInput -Name clsCompliant
+    $comVisible = "none"
+    $clsCompliant = "none"
     # $ensureAttribute = Get-VstsInput -Name ensureAttribute -AsBool
     # $script:customAttributes = Get-VstsInput -Name customAttributes
 
