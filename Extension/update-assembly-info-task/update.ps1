@@ -421,27 +421,27 @@ function Get-BuildNumberRevision {
 }
 
 try {
-    $assemblyInfoFiles = Get-VstsInput -Name assemblyInfoFiles -Require
+    $assemblyInfoFiles = $env:Build_SOURCESDIRECTORY + "\**\*AssemblyInfo.*"
     $script:description = Get-VstsInput -Name description
-    $script:configuration = Get-VstsInput -Name configuration
+    $script:configuration = $env:BUILD_CONFIGURATION
     $script:company = Get-VstsInput -Name company
     $script:product = Get-VstsInput -Name product
-    $script:copyright = Get-VstsInput -Name copyright
-    $script:culture = Get-VstsInput -Name culture
-    $script:trademark = Get-VstsInput -Name trademark
-    $script:fileVersionMajor = Get-VstsInput -Name fileVersionMajor
-    $script:fileVersionMinor = Get-VstsInput -Name fileVersionMinor
-    $script:fileVersionBuild = Get-VstsInput -Name fileVersionBuild
-    $script:fileVersionRevision = Get-VstsInput -Name fileVersionRevision
-    $script:assemblyVersionMajor = Get-VstsInput -Name assemblyVersionMajor
-    $script:assemblyVersionMinor = Get-VstsInput -Name assemblyVersionMinor
-    $script:assemblyVersionBuild = Get-VstsInput -Name assemblyVersionBuild
-    $script:assemblyVersionRevision = Get-VstsInput -Name assemblyVersionRevision
-    $script:informationalVersion = Get-VstsInput -Name informationalVersion
-    $comVisible = Get-VstsInput -Name comVisible
-    $clsCompliant = Get-VstsInput -Name clsCompliant
-    $ensureAttribute = Get-VstsInput -Name ensureAttribute -AsBool
-    $script:customAttributes = Get-VstsInput -Name customAttributes
+    $script:copyright = ""
+    $script:culture = ""
+    $script:trademark = $env:ASSEMBLY_COMPANY
+    $script:fileVersionMajor = 1
+    $script:fileVersionMinor = 0
+    $script:fileVersionBuild = 0
+    $script:fileVersionRevision = $env:BUILD_BUILDID
+    $script:assemblyVersionMajor = 1
+    $script:assemblyVersionMinor = 0
+    $script:assemblyVersionBuild = 0
+    $script:assemblyVersionRevision = $env:BUILD_BUILDID
+    $script:informationalVersion = $env:ASSEMBLY_FILEVERSION
+    $comVisible = "none"
+    $clsCompliant = "none"
+    $ensureAttribute = $true
+    $script:customAttributes = ""
 
     if (Test-BuildNumberRevisionVariableUsed) {
         if (!(Get-VstsTaskVariable -Name "System.EnableAccessToken" -AsBool)) {
