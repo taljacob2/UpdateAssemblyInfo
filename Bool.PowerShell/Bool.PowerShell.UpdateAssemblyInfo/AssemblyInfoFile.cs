@@ -313,7 +313,7 @@
                 case ".cs":
                     return Language.Cs;
                 default:
-                    throw new ArgumentOutOfRangeException("File extension " + extension + "is not supported");
+                    throw new ArgumentOutOfRangeException("File extension " + extension + " is not supported");
             }
         }
     }
